@@ -19,7 +19,7 @@ Cloud Scheduler
 → Google BigQuery
 → Power BI Dashboard
 → Gmail Email Alert
-````markdown
+
 ```
 ## Features
 - Collect YouTube comments from multiple videos.
@@ -122,19 +122,19 @@ youtube-comment-sentiment-analysis/
 ├── .gitignore
 ├── LICENSE
 └── README.md
-````markdown
+
 ```
 ## How to Run locally
 1. clone the repository
 ```
 git clone https://github.com/TheViet94/youtube-comment-sentiment-analysis.git
 cd youtube-comment-sentiment-analysis
-````markdown
+
 ```
 2. Install dependencies
 ```
 pip install -r Cloud_run/requirements.txt
-````markdown
+
 ```
 3. Set environment variables
 Create a .env file based on .env.example.
@@ -149,7 +149,7 @@ BQ_LOCATION=asia-southeast1
 GMAIL_USER=your_email@gmail.com
 GMAIL_APP_PASSWORD=YOUR_GMAIL_APP_PASSWORD
 TO_EMAIL=receiver_email@gmail.com
-````markdown
+
 ```
 ## Cloud Deloyment
 The ETL service is deployed on Google Cloud Run.
@@ -160,7 +160,7 @@ gcloud run deploy youtube-comment-etl \
   --source Cloud_run \
   --region asia-southeast1 \
   --allow-unauthenticated
-  ````markdown
+
 ```
 Cloud Scheduler is used to trigger the Cloud Run endpoint automatically.
 
