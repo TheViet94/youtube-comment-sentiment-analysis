@@ -19,6 +19,8 @@ Cloud Scheduler
 → Google BigQuery
 → Power BI Dashboard
 → Gmail Email Alert
+````markdown
+```
 ## Features
 - Collect YouTube comments from multiple videos.
 - Clean and transform raw comment text using Python.
@@ -28,6 +30,7 @@ Cloud Scheduler
 - Automate the ETL process using Google Cloud Run and Cloud Scheduler.
 - Send Gmail alerts when new comments are detected.
 - Build an interactive Power BI dashboard for sentiment and engagement analysis.
+  
 ## Tool & Technologies
 | Category        | Tools                             |
 | --------------- | --------------------------------- |
@@ -95,7 +98,9 @@ The email includes:
 - Video name
 - Sentiment label
 - Like count
+  
 ## Repository Structure
+```text
 youtube-comment-sentiment-analysis/
 │
 ├── Cloud_run/
@@ -117,15 +122,24 @@ youtube-comment-sentiment-analysis/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+````markdown
+```
 ## How to Run locally
 1. clone the repository
+```
 git clone https://github.com/TheViet94/youtube-comment-sentiment-analysis.git
 cd youtube-comment-sentiment-analysis
+````markdown
+```
 2. Install dependencies
+```
 pip install -r Cloud_run/requirements.txt
+````markdown
+```
 3. Set environment variables
 Create a .env file based on .env.example.
 required variables:
+```
 YOUTUBE_API_KEY=YOUR_YOUTUBE_API_KEY
 PROJECT_ID=YOUR_GCP_PROJECT_ID
 DATASET_ID=youtube_comment_analysis
@@ -135,15 +149,21 @@ BQ_LOCATION=asia-southeast1
 GMAIL_USER=your_email@gmail.com
 GMAIL_APP_PASSWORD=YOUR_GMAIL_APP_PASSWORD
 TO_EMAIL=receiver_email@gmail.com
+````markdown
+```
 ## Cloud Deloyment
 The ETL service is deployed on Google Cloud Run.
 
 Example deployment command:
+```
 gcloud run deploy youtube-comment-etl \
   --source Cloud_run \
   --region asia-southeast1 \
   --allow-unauthenticated
+  ````markdown
+```
 Cloud Scheduler is used to trigger the Cloud Run endpoint automatically.
+
 ## Results & Insights
 
 Key insights from the dashboard:
@@ -154,6 +174,7 @@ Negative comments make up a small percentage of total comments.
 Some videos generate more engagement than others.
 Comment activity is concentrated during specific hours of the day.
 Top liked comments help identify the most noticeable audience reactions.
+
 ## Future Improvements
 Use a machine learning or transformer-based NLP model for more accurate sentiment classification.
 Add topic modeling to identify common themes in negative comments.
@@ -161,5 +182,6 @@ Publish the dashboard to Power BI Service for scheduled refresh.
 Add alert rules for high negative comment volume.
 Store email alert logs in BigQuery.
 Add video metadata such as title, views, likes, and publish date.
+
 ## Author
 Developed by TheViet94.
