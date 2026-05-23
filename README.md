@@ -31,7 +31,7 @@ Cloud Scheduler
 - Send Gmail alerts when new comments are detected.
 - Build an interactive Power BI dashboard for sentiment and engagement analysis.
   
-## Tool & Technologies
+## Tools & Technologies
 | Category        | Tools                             |
 | --------------- | --------------------------------- |
 | Programming     | Python                            |
