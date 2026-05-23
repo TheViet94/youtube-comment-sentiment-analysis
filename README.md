@@ -31,6 +31,32 @@ Cloud Scheduler
 - Send Gmail alerts when new comments are detected.
 - Build an interactive Power BI dashboard for sentiment and engagement analysis.
   
+## Repository Structure
+```text
+youtube-comment-sentiment-analysis/
+│
+├── Cloud_run/
+│   ├── main.py
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── .dockerignore
+│
+├── notebooks/
+│   └── youtube_comment_analysis.ipynb
+│
+├── dashboard/
+│   └── youtube_comment_sentiment_dashboard.pbix
+│
+├── assets/
+│   └── dashboard.png
+│
+├── .env.example
+├── .gitignore
+├── LICENSE
+└── README.md
+
+```
+  
 ## Tools & Technologies
 | Category        | Tools                             |
 | --------------- | --------------------------------- |
@@ -99,31 +125,7 @@ The email includes:
 - Sentiment label
 - Like count
   
-## Repository Structure
-```text
-youtube-comment-sentiment-analysis/
-│
-├── Cloud_run/
-│   ├── main.py
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── .dockerignore
-│
-├── notebooks/
-│   └── youtube_comment_analysis.ipynb
-│
-├── dashboard/
-│   └── youtube_comment_sentiment_dashboard.pbix
-│
-├── assets/
-│   └── dashboard.png
-│
-├── .env.example
-├── .gitignore
-├── LICENSE
-└── README.md
 
-```
 ## How to Run locally
 1. clone the repository
 ```
