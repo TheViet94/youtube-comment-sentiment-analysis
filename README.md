@@ -92,6 +92,10 @@ Main fields include:
 | `comment_length` | Length of cleaned comment                    |
 | `word_count`     | Number of words in the comment               |
 
+The transform step also accepts offline comment rows with `text`, `comment`,
+`message`, `feedback`, or `review` columns. This supports Xquik export CSVs and
+other comment datasets while preserving the BigQuery output schema.
+
 ## Data Pipeline
 - Cloud Scheduler triggers the Cloud Run service automatically.
 - Cloud Run executes the Python ETL script.

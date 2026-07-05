@@ -12,6 +12,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timezone
 
+from comment_import import normalize_comment_dataframe
+
 app = Flask(__name__)
 
 # =========================================================
@@ -386,6 +388,7 @@ def transform_comments(raw_comments):
     if df.empty:
         return df
 
+    df = normalize_comment_dataframe(df)
     df = df.dropna(subset=["comment_text"])
     df["author"] = df["author"].fillna("Unknown")
     df = df.drop_duplicates(subset=["video_id", "comment_id"])
